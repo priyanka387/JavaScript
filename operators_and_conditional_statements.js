@@ -1,49 +1,70 @@
-/*This code prints hello world
-on console window */
-//console.log("Hello World");
+//This code prints hello world on console window 
+console.log("Hello World");
 
 //Arithematic operation
-// let a = 5;
-// let b = 2;
-// let c = a + b;
-// let d = a - b;
-// console.log("a=",a,"& b=",b)
-// console.log("a+b=", a+b)
-// console.log("a-b=", a-b)
-// console.log("a*b=", a*b)
-// console.log("a/b=", a/b)
-// console.log("a%b=", a%b)
-// console.log("a**b=", a**b)
 
-//Unary Operators
-// let a = 5;
-// let b = 2;
-// console.log("a=",a,"& b=",b)
+//sum
+let a = 10;
+let b = 20;
+let c = a + b;
+console.log("sum=",c);
 
-// a = a+1;
-// console.log("a=",a);
+//multiplication
+let d = 40;
+let e = 50;
+let f = d * e;
+console.log("multiplication=", f);
 
-// a= a++;
-// console.log("a=",a);
+//division
+let g = 9
+let h = 3
+let i = g/h
+console.log("division=", i)
 
-// a = a-1;
-// console.log("a=",a);
+//substraction
+let j = 9
+let k = 3
+let l = j/k
+console.log("substraction=", l)
 
-// a = a--;
-// console.log("a=",a)
 
-//console.log("++a=", ++a)
-//console.log("a++=", a++)
-//console.log("a=",a)
+//modulus
+let m = 11
+let n = 2
+let o = m%n
+console.log("modulus=",o)
 
-//console.log("--a=", --a)
-//console.log("a--=", a--)
-//console.log("a=",a)
+//exponentiation
+let p = 2
+let q = 3
+let r = p ** q
+console.log("exponentiation=", r)
+
+
+//Unary Operators: increment and decreament
+let s = 10;
+//s = s+1;
+//console.log("s:", s)
+s++;
+console.log("s=", s);
+
+
+let t = 12;
+t--;
+console.log("t=",t);
+
+let u = 5;
+//console.log("++u=",++u); //pre increment : it increase the value first and then print
+console.log("u++=",u++); //post increment : it first print the same value and in next execution it will print the increment value
+console.log("u=",u);
+
+let v = 9;
+//console.log("--v",--v); // pre increment
+console.log("v--",v--);  //post decrement
+console.log("v=",v);
 
 //Assignment Operator
-// let a = 5;
-// let b = 2;
-// console.log("a=",a,"& b=",b)
+
 
 //a+=4; // a = a+4
 //console.log("a=",a)//9
@@ -192,18 +213,18 @@ on console window */
 
 // write a code which can give grades to student according to their scores
 
-let number = prompt("Enter a number")
+// let number = prompt("Enter a number")
 
-if (number >= 90 && number <= 100) {
-    console.log(number, "A")
-} else if (number >= 70 && number <= 89) {
-    console.log(number,"B")
-} else if (number >= 60 && number <= 69) {
-    console.log(number, "C")
-} else if (number >= 50 && number <=59 ) {
-    console.log(number, "C")
-} else {
-    console.log(number, "F")
-}
+// if (number >= 90 && number <= 100) {
+//     console.log(number, "A")
+// } else if (number >= 70 && number <= 89) {
+//     console.log(number,"B")
+// } else if (number >= 60 && number <= 69) {
+//     console.log(number, "C")
+// } else if (number >= 50 && number <=59 ) {
+//     console.log(number, "C")
+// } else {
+//     console.log(number, "F")
+// }
 
 
