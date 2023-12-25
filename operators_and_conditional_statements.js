@@ -64,167 +64,189 @@ console.log("v--",v--);  //post decrement
 console.log("v=",v);
 
 //Assignment Operator
+let x = 5;
 
 
-//a+=4; // a = a+4
-//console.log("a=",a)//9
+// x+= 4 // x = x + 4 = 9
+// console.log(x)
 
-// a-=4; // a = a-4
-// console.log("a=",a)//1
+// x-= 4 // x = x - 4 = 1
+// console.log(x)
 
-// a*=4// a = a*4
-// console.log("a=",a)//20
+//  x*=5 // x = x*5=25
+// console.log(x)
 
-//a/=4// a = a/4
-//console.log("a=",a)
+// x/=5 // x = x/5 =1
+// console.log(x)
 
-// a%=4// a = a%4
-// console.log("a=",a)
+x%=2 // x = x/2 = 1
+console.log(x)
 
-// a **= 4;// a = a ** 4
-// console.log("a=",a)
+// comparision operators : "====" checks both equal to and type
+let a1 = 5;
+let b1 = 2;
+console.log("5==2:", a1==b1);
+console.log("5!=2:",a1!=b1);
 
-// comparision operators
-// let a = 5;
-// let b = 3;
-// console.log("a <= b = ", a <= b);
+let c1 = 6;
+let d1 = "6";
+console.log("c1===d1",c1===d1);
 
-// logical operator
-// let a = 6;
-// let b = 6;
 
-// let cond1 = a > b; //false
-// let cond2 = a === 6; //true
+//logical operator
+let e1 = 11;
+let f1 = 12;
 
-// //console.log("cond1 || cond2 = ", cond1 || cond2)
-// console.log(" !(6<5)= ", !(6<5))
+let cond1 = e1>f1;  //false
+console.log(cond1);
+
+let cond2 = f1>e1;  //true
+console.log(cond2);
+
+let cond3 = e1>=f1;
+console.log(cond3);
+
+//logical operator
+let x1 = 6;
+let y1 = 5;
+
+//AND
+let cond4 = x1 > y1 //true
+let cond5 = x1 === 6 //true
+console.log("cond4 && cond5 = ", cond4 && cond5) //true (&& = both condition should be true)
+
+//OR
+let cond6 = x1 > y1; //true
+let cond7 = x1 === y1; //false
+console.log("cond6 || cond7 = ", cond6 || cond7); //true (|| = either of the condition should be true)
+
+
+//NOT
+console.log("!(x1<y1)=", !(x1<y1)) //true
 
 //conditional statements
+//example1
+let age = 18;
+let vote;
 
-// let age = 16;
+if (age === 18){
+    vote ="yes"
+}
+console.log(vote);
 
-//  if (age >= 18){
-//     console.log("you can vote")
-// };
+//example2
+let mode = "dark";
+let color;
 
-// if (age < 18){
-//     console.log("you cannot vote")
-// };
+if (mode === "dark"){
+    color = "black"
+}
 
-//let mode = "dark";
-//let color;
+if (mode === "light"){
+    color = "white"
+}
+console.log(color);
 
-// if (mode==="dark"){
-//     color = "black"
-// }
+//or we can write above example using if else:
+let mode1 = "light";
+let color1;
 
-// if (mode==="light"){
-//     color = "white"
-// }
-
-// console.log(color)
-
-// let mode = "light";
-// let color;
-
-// if (mode==="light"){
-//     color = "white"
-// } else {
-//     color = "black"
-// }
-
-// console.log(color)
-
-// let age = 25
-
-// if (age>=18){
-//     console.log("vote")
-// } else {
-//     console.log("cannot vote")
-// }
-
-// let a = 4;
-
-// if (a %2 === 0) {
-//     console.log("even")
-// } else {
-//     console.log("odd")
-// };
-
-// let age = 26;
-
-// if (age < 18 ) {
-//     console.log("junior")
-// } else if (age > 60) {
-//     console.log("senior")
-// } else {
-//     console.log("middle")
-// };
-
-// let mode = "dark";
-// let color;
-
-// if (mode === "dark") {
-//     color = "dark"
-// } else if (mode === "blue") {
-//     color = "blue"
-// } else if (mode === "pink") {
-//     color = "pink"
-// } else {
-//     color = "white"
-// }
-
-// console.log(color)
-
-// let mode = "dark";
-// let color;
-
-// if (mode==="dark") {
-//     console.log(mode)
-// };
-
-//let age = 25;
+if (mode1 === "dark"){
+    color1 = "black";
+} else {
+    color1 = "white"
+};
+console.log(color1)
 
 
-// let result = age >= 18 ? "adult" : "not adult";
-// console.log(result)
+let age1 = 25;
 
-//let result = age >= 18 ? console.log("adult") : console.log("not adult");
-// console.log(result)
+if (age >=18) {
+    console.log("you can vote")
+} else {
+    console.log("you cannot vote")
+}
 
+let num = 5;
+
+if (num%2===0){
+    console.log("the number is even")
+} else {
+    console.log("the number is odd")
+}
+
+let age2 = 26;
+
+if (age <26 ){
+    console.log("junior")
+} else if (age > 60) {
+    console.log("senior")
+} else {
+    console.log("middle")
+}
+
+let mode3 = "light"
+let color3;
+
+if (mode3==="dark"){
+    color3 = "black"
+} else if ( mode3 === "blue") {
+    color3 = "blue"
+} else if (mode3 === "pink") {
+    color3 = "pink"
+} else {
+    color3 = "white"
+}
+console.log(color3)
+
+if (mode3==="light"){
+console.log(mode3)};
+
+//ternary operator
+let age4 = 25;
+
+let result = age>=18? "adult":"not adult";
+console.log(result)
+
+let age5 =  16;
+let result1 = age>19? console.log("adult"):console.log("not adult");
 
 
 //alert : one time pop up
 //alert("hello!")
 
+//prompt
+// let name1 = prompt("hello!");
+// console.log(name1);
+
 // Get user to input a number using prompt ("Enter a number:") 
 //check if the number is multiple of 5 or not
 
-// let name = prompt("hello!")
-// console.log(name)
-
-// let number = prompt("Enter a number")
-// if (number%5 ===0) {
-//     console.log(number,"number is multiple of 5")
-// } else {
-//     console.log(number, "number is not multiple of 5")
-// }
-
+let number = prompt("Enter a number")
+if (number%5===0){
+    console.log(number, "number is multilpe of 5")
+} else {
+    console.log(number, "number is not multilpe of 5")
+};
 
 // write a code which can give grades to student according to their scores
+let score = prompt("Enter your score")
 
-// let number = prompt("Enter a number")
+if (score>=90 && score<=100){
+    console.log(score,"A")
+} else if (score>=70 && score<=89){
+    console.log(score,"B")
+} else if (score>=60 && score<=69){
+    console.log(score,"C")
+} else if (score>=50 && score<59){
+    console.log(score,"D")
+} else {
+    console.log("fail")
+};
 
-// if (number >= 90 && number <= 100) {
-//     console.log(number, "A")
-// } else if (number >= 70 && number <= 89) {
-//     console.log(number,"B")
-// } else if (number >= 60 && number <= 69) {
-//     console.log(number, "C")
-// } else if (number >= 50 && number <=59 ) {
-//     console.log(number, "C")
-// } else {
-//     console.log(number, "F")
-// }
+
+
+
+
 
 
