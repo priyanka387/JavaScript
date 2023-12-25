@@ -1,224 +1,212 @@
 // Function
 
-//Function1
-function myFunction() {
-    console.log("Apna Collge");
-    console.log("We are learning java script");
-}
-myFunction()
+//example1
+function myFunction(){
+    console.log("Welcome to my channel")
+    console.log("I love javascript")
+};
 
-//Function2
-function myFunction2(msg) {
+myFunction();
+
+//example2
+function myFunction1(msg){
     console.log(msg)
 }
+myFunction1("I love Javascript");
 
-myFunction2("I love JS")
-
-//Function3
+//example3
 function mySum(a,b){
-    console.log("sum=", a+b)
-}
+    console.log(a+b)
+};
 
-mySum(3,4)
+mySum(3,5);
 
-//Function4
-function sum(x,y) {
-    let s = x+y;
-    return s;
-}
+//example4
+function sum(x,y){
+    s = x+y
+    return s
+};
+let val= sum(6,8);
+console.log(val);
 
-let val = sum(6,7)
-console.log(val)
+//Arrow functions
+function sum(a,b){
+    return a+b
+};
 
-//Arrow Function
-
-//ex-1 :normal function
-function sum1(a,b) {
-    return a+b;
-}
-
-//ex-1 :arrow function
 const arrowSum = (a,b) => {
-    console.log(a+b);
+    console.log(a+b)
 }
 
-function mul(x,y) {
-    return x*y;
+console.log(arrowSum);
+
+function sub(a,b){
+    return a-b
+};
+
+const arrowSub = (a,b) => {
+    console.log(a-b)
 }
 
-const arrowMul = (x,y) => {
-    console.log(x*y);
+console.log(arrowSub);
+
+function mul(a,b){
+    return a*b
+};
+
+const arrowMul = (a,b) =>{
+    console.log(a*b)
 }
 
-const printhello = () => {
+console.log(arrowMul);
+
+arrowMul(3,4);
+
+const printHello = () => {
     console.log("hello")
 }
 
-//create a function using the function keyword that takes a string as an argument and returns
-//the number of vowels in the string
+printHello();
 
-function countVowels(str) {
+//create a function using the "function" keyword that takes a string 
+// as an argument and return the number of vowels in the string
+
+
+function countVowels(str){
     let count = 0;
-    for (const char of str) {
-        if (
-            char === "a" || 
-            char === "e" || 
-            char === "i" || 
-            char === "o" || 
-            char === "u"
-        ) {
-            count++;
+    for (const char of str){
+        if (char==="a"||
+           char==="e" || 
+           char==="i" || 
+           char==="o" || 
+           char==="au"
+           ) {
+           count++
         }
-    }   
-    console.log(count)
-}
 
-countVowels("ApnaCollege")
+    }
+    console.log(count);
+};
+
+countVowels("apnacollege");
+countVowels("priyanka");
 
 const countVow = (str) => {
     let count = 0;
-    for (const char of str) {
-        if (
-            char === "a" || 
-            char === "e" || 
-            char === "i" || 
-            char === "o" || 
-            char === "u"
-        ) {
-            count++;
+    for (const char of str){
+        if (char==="a"||
+           char==="e" || 
+           char==="i" || 
+           char==="o" || 
+           char==="au"
+           ) {
+           count++
         }
-    }   
-    console.log(count)
-}
 
-//"for each" method
+    }
+    console.log(count);
+
+};
+
+countVow("priyanka");
+
+//for each
 let arr = [1,2,3,4,5];
 
-arr.forEach(function printVal(val) {
+arr.forEach(function printVal(val){
     console.log(val)
-})
+});
 
-arr.forEach((val) => {
-    console.log(val);
-})
+let cities = ["delhi", "mumbai", "pune", "gurgaon"];
 
-let arr1 = ["delhi", "mumbai", "pune"]
+cities.forEach((val, idx, arr) => {
+    console.log(val.toUpperCase(), idx, arr)
+});
 
-arr1.forEach((val, idx) => {
-    console.log(val.toUpperCase(), idx)
+// for a given array of numbers print the square of each value using forEach loop
+ let num = [1,2,3,4,5,6,7,8,9]
+
+num.forEach((val) =>{
+    val = val**2
+    console.log(val)
 }
 );
 
-//for a given array of numbers, print the square of each value using forEach loop
+let calcSquare = num => {
+    console.log(num**2)
+};
 
-let arr3 = [1,2,3,4,5,6,7,8,9]
+num.forEach(calcSquare);
 
-arr3.forEach((val) => {
-    val = val*val;
-    console.log(val);
+//map
+let arr1 = [1,2,3,4,5,6];
+let newArr = arr1.map((val) => {
+    return val**2
 });
 
-let arr4 = [12,13,14,15,16,17,18,19]
-let calSquare = (val) => {
-    val = val*val;
-    console.log(val);
-}
+console.log(newArr);
 
-arr4.forEach(calSquare);
+//filter 
+let arr2 = [45,91,67,22,48,92,69,56]
 
-//map: return new array
-
-let arr5 = [24,56,78];
-
-arr5.map((val) => {
-    console.log(val);
-});
-
-let arr6 = [23,53,89];
-
-let newArray = arr6.map((val) => {
-    return val*val;
-}); 
-
-console.log(newArray);
-
-//filer: creates a new array of element
-
-let arr7 = [1,2,3,4,5,6,7,8,9]
-
-let evenArray = arr7.filter((val) => {
+let evenArr = arr2.filter((val) => {
     return val%2===0;
-}
-);
+});
 
-console.log(evenArray)
+console.log(evenArr);
 
-let arr8 = [3,2,4,7,98,34]
+//reduce
+let arr3 = [1,2,3,4]
 
-let numArray = arr8.filter((val) => {
-    return val>3;
-}
-);
-
-console.log(numArray)
-
-
-//reduce : performs some operation and reduce it to a single value. it returns that value
-
-const arr9 = [1,2,3,4];
-
-let output = arr9.reduce((res, curr) => {
-    return res + curr;
-}
-);
+const output = arr3.reduce((res, curr) => {
+    return res+curr;
+});
 
 console.log(output);
 
-const arr10 = [5,6,2,1,3];
+let arr4 = [4,8,6,9];
 
-let output1 = arr10.reduce((prev, curr) => {
-    return prev> curr ? prev : curr;
+const largest = arr4.reduce((prev,curr) =>{
+    return prev > curr ? prev : curr;
 });
 
-console.log(output1);
+console.log(largest);
 
-//we are given a array of marks of students . Filter out the marks of students scored 90+
+let marks = [97,64,32,49,99,86];
+let res = marks.filter((val) =>{
+    return val>90
+});
+console.log(res);
 
-let marks = [98,56,45,23,97,91,23,41,87,69];
+let n = prompt("enter a number")
+let arr5 = [];
+for (let i=1; i<=n; i++){
+    arr5[i-1] =i
+}
+console.log(arr5);
 
-let toppers = marks.filter((val) => {
-    return val > 90;
+let sum1 = arr5.reduce((res,curr)=> {
+    return res+curr
 });
 
-console.log(toppers)
+console.log(sum1);
 
-//take a number n as input from user, create an array of numbers 1 to n .
-//use the reduce method to calculte sum of all numbers in the array.
-//use the reduce method to calculate product of all numbers in the array
 
-let n = prompt("Enter a number:");
+let factorial = arr5.reduce((res,curr)=> {
+    return res*curr
+});
 
-let arr12 = []
-for (let i=1; i<=n; i++) {
-    arr12[i-1] = i; 
-}
+console.log(factorial);
 
-console.log(arr12);
 
-let newSum1 = arr12.reduce((res, prev) => {
-    return res + prev
-}
 
-);
 
-console.log(newSum1);
 
-let newProd1 = arr12.reduce((res, prev) => {
-    return res * prev
-}
 
-);
 
-console.log(newProd1);
 
+
+
+
+  
 
