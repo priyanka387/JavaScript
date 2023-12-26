@@ -1,0 +1,15 @@
+.heading {
+    color : blue;
+    background-color:crimson;
+    font:100
+}
+
+body {
+    background-color:cyan;
+
+}
+
+button {
+    background-color: blue;
+    color : white;
+}
